@@ -1,0 +1,24 @@
+version: '3.9'
+
+services:
+  desafio_2:
+    container_name: desafio_2
+    build:
+      context: .
+    ports:
+      - 8000:8000
+    volumes:
+      - ./desafio_2:/desafio_2
+      - ./data/web/static:/data/web/static/
+      - ./data/web/media:/data/web/media/
+    env_file:
+      - ./dotenv_files/.env
+    depends_on:
+      - psql
+  psql:
+    container_name: psql_cc
+    image: postgres:13-alpine
+    volumes:
+      - ./data/postgres/data:/var/lib/postgresql/data/
+    env_file:
+      - ./dotenv_files/.env
