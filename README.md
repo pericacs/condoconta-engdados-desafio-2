@@ -10,3 +10,31 @@ Escreva outro script na mesma linguagem ou em uma diferente que consuma dados do
 
 3: Tratamento de Erros e Registro
 Modifique seu script do Passo 2 para incluir mecanismos de tratamento de erros. Implemente estratégias apropriadas de tratamento de erros para cenários como falhas na conexão com o banco de dados, indisponibilidade do serviço de fila ou formatos de dados inválidos. Você pode escolher registrar os erros no banco de dados se preferir. Utilize uma biblioteca de registro adequada para a linguagem de programação escolhida. -->
+
+
+
+
+<!-- RESUMO DO DESAFIO 2 -->
+
+<!-- 
+O desafio foi criado usando 
+- framework DJANGO
+- Docker
+- Postgres
+- Rabbit
+
+Em requeriments, coloquei as bibliotecas que usei para fazer rodar o projeto desafio 2.
+
+
+
+Criei tambem uma api rest para testar os dados faker na insercao da base de dados (http://127.0.0.1:8000/transacao/)
+
+As configurações do Rabbit estão em desafio_2/fintech/models.py, mas coloco abaixo para facilitar o acesso
+{
+        rabbitmq_host = 'localhost'
+        rabbitmq_port = 5672
+        rabbitmq_user = 'guest'
+        rabbitmq_password = 'guest'
+        exchange_name = 'payments_queue' 
+}
+ -->
